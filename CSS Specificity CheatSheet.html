@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>CSS Specificity CheatSheet</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Description</th>
+                        <th>Specificity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>* {}</td>
+                        <td>Universal Selector</td>
+                        <td class="specificity">0-0-0</td>
+                    </tr>
+                    <tr>
+                        <td>li {}</td>
+                        <td>One Type</td>
+                        <td class="specificity">0-0-1</td>
+                    </tr>
+                    <tr>
+                        <td>ul li {}</td>
+                        <td>Two Types</td>
+                        <td class="specificity">0-0-2</td>
+                    </tr>
+                    <tr>
+                        <td>body div ... ol li p a {}</td>
+                        <td>Nine Types</td>
+                        <td class="specificity">0-0-9</td>
+                    </tr>
+                    <tr>
+                        <td>.myclass {}</td>
+                        <td>One Class</td>
+                        <td class="specificity">0-1-0</td>
+                    </tr>
+                    <tr>
+                        <td>*.myclass {}</td>
+                        <td>Universal Selector + One class</td>
+                        <td class="specificity">0-1-0</td>
+                    </tr>
+                    <tr>
+                        <td>*[type:checkbox] {}</td>
+                        <td>Universal Selector + Attribute</td>
+                        <td class="specificity">0-1-0</td>
+                    </tr>
+                    <tr>
+                        <td>:only-of-type {}</td>
+                        <td>One Pseudo-Class</td>
+                        <td class="specificity">0-1-0</td>
+                    </tr>
+                    <tr>
+                        <td>li.myclass {}</td>
+                        <td>One Type + One Class</td>
+                        <td class="specificity">0-1-1</td>
+                    </tr>
+                    <tr>
+                        <td>li[attr] {}</td>
+                        <td>One Type + One Attribute</td>
+                        <td class="specificity">0-1-1</td>
+                    </tr>
+                    <tr>
+                        <td>ul ol li.red {}</td>
+                        <td> One Class + Three Types</td>
+                        <td class="specificity">0-1-3</td>
+                    </tr>
+                    <tr>
+                        <td>li.red.level {}</td>
+                        <td>Two Classes + One Type</td>
+                        <td class="specificity">0-2-1</td>
+                    </tr>
+                    <tr>
+                        <td>#myDiv {}</td>
+                        <td>One ID</td>
+                        <td class="specificity">1-0-0</td>
+                    </tr>
+                    <tr>
+                        <td>#myDiv li.class a[href] {}</td>
+                        <td>One ID + One Class + One Attribute + Two Types</td>
+                        <td class="specificity">1-2-2</td>
+                    </tr>
+                    <tr>
+                        <td>#divitis #myDiv a {}</td>
+                        <td>Two ID's + One Type</td>
+                        <td class="specificity">2-0-1</td>
+                    </tr>
+                    <tr>
+                        <td>style=""</td>
+                        <td>Inline Style</td>
+                        <td class="specificity">1-0-0-0</td>
+                    </tr>
+                    <tr>
+                        <td>!important</td>
+                        <td>Important</td>
+                        <td class="specificity">1-0-0-0-0</td>
+                    </tr>
+                </tbody>
+            </table>
+    </body>
+</html>
